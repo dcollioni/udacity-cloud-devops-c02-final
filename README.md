@@ -10,12 +10,17 @@
 ## Setup
 1. Create a Python virtual environment:
     ```sh
-    python3 -m venv ~/.udacity-cloud-devops-c02-final
+    make setup
     ```
 
 1. Activate the virtual environment:
     ```sh
     source ~/.udacity-cloud-devops-c02-final/bin/activate
+    ```
+
+1. Deactivate the virtual environment:
+    ```sh
+    deactivate
     ```
 
 ## Install, Lint and Test
