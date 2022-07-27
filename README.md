@@ -1,2 +1,5 @@
-# udacity-cloud-devops-c02-final
-Udacity Cloud DevOps - Course 02 - Final Project
+# Udacity Cloud DevOps - Course 02 - Final Project
+
+## Project Plan and Task Tracking
+- [Project plan spreadsheet](https://docs.google.com/spreadsheets/d/1p29UxxCbZ4jmfiDiYAPbk6N9hc05gtVK5Gno8hvmO3c)
+- [Task tracking Trello board](https://trello.com/b/iziwVR8V/build-a-ci-cd-pipeline)
