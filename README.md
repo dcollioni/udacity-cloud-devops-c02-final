@@ -1,5 +1,8 @@
 # Udacity Cloud DevOps - Course 02 - Final Project
 
+## Overview
+Flask ML Web App deployed on Azure with CI/CD
+
 ## Project Plan and Task Tracking
 - [Project plan spreadsheet](https://docs.google.com/spreadsheets/d/1p29UxxCbZ4jmfiDiYAPbk6N9hc05gtVK5Gno8hvmO3c)
 - [Task tracking Trello board](https://trello.com/b/iziwVR8V/build-a-ci-cd-pipeline)
@@ -7,7 +10,9 @@
 ## Azure Cloud Shell
 - ![GitHub project cloned on Azure Cloud Shell](screenshots/azure-cloud-shell-project-clone.png)
 
-## Setup
+## Instructions
+<TODO: Architectural Diagram (Shows how key parts of the system work)>
+
 1. Create a Python virtual environment:
     ```sh
     make setup
@@ -29,15 +34,43 @@
     make all
     ```
 
-    The result should look like that:
+    The result should look like this:
     ![Azure Cloud Shell - Make All command result](screenshots/azure-cloud-shell-make-all.png)
+
+## Azure Web App
+1. Create the Azure Web App:
+    ```sh
+    az webapp up --sku F1 -n udacity-cloud-devops-c02-final
+    ```
+
+1. The result of a successful web app deployment should look like this:
+    ![Azure Cloud Shell - Webapp deployed](screenshots/azure-cloud-shell-webapp-up.png)
+
+1. Check the Web App:
+    ```sh
+    az webapp list -o table
+    ```
+
+1. The Web App created should be listed in the results like this:
+    ![Azure Cloud Shell - Webapp list](screenshots/azure-cloud-shell-webapp-list.png)
+
+1. The app will be available at the URL:
+    - https://udacity-cloud-devops-c02-final.azurewebsites.net
 
 ## GitHub Action Build
 1. The app build is setup on the GitHub Actions:
     - https://github.com/dcollioni/udacity-cloud-devops-c02-final/actions
 
-1. The result of a successful build workflow should look like that:
+1. The result of a successful build workflow should look like this:
     ![GitHub Actions - Build complete](screenshots/github-actions-build-complete.png)
+
+## Enhancements
+- Write tests and run them using pytest
+- Activate hadolint for Dockerfiler linting
+- Configure CD on GitHub Actions
+
+## Demo
+<TODO: Add link Screencast on YouTube>
 
 ---
 [![Python application](https://github.com/dcollioni/udacity-cloud-devops-c02-final/actions/workflows/python-app.yml/badge.svg)](https://github.com/dcollioni/udacity-cloud-devops-c02-final/actions/workflows/python-app.yml)
