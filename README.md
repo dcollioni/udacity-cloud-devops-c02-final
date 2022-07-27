@@ -17,3 +17,12 @@
     ```sh
     source ~/.udacity-cloud-devops-c02-final/bin/activate
     ```
+
+## Install, Lint and Test
+1. Run install, lint and tests:
+    ```sh
+    make all
+    ```
+
+    The result should look like that:
+    ![Azure Cloud Shell - Make All command result](screenshots/azure-cloud-shell-make-all.png)
