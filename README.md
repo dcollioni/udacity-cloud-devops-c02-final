@@ -8,10 +8,13 @@ Flask ML Web App deployed on Azure with CI/CD
 - [Task tracking Trello board](https://trello.com/b/iziwVR8V/build-a-ci-cd-pipeline)
 
 ## Azure Cloud Shell
-- ![GitHub project cloned on Azure Cloud Shell](screenshots/azure-cloud-shell-project-clone.png)
+1. Repository cloned on Azure Cloud Shell
+    ![GitHub project cloned on Azure Cloud Shell](screenshots/azure-cloud-shell-project-clone.png)
 
 ## Architectural Diagram
-TODO
+The following diagram shows the CI/CD process:
+
+![CI/CD process](screenshots/architectural-diagram.png)
 
 ## Instructions
 1. Create a Python virtual environment:
