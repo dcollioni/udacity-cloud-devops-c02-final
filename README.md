@@ -39,23 +39,39 @@ Flask ML Web App deployed on Azure with CI/CD
 
 ## Azure Web App
 1. Create the Azure Web App:
+
     ```sh
     az webapp up --sku F1 -n udacity-cloud-devops-c02-final
     ```
 
 1. The result of a successful web app deployment should look like this:
+
     ![Azure Cloud Shell - Webapp deployed](screenshots/azure-cloud-shell-webapp-up.png)
 
 1. Check the Web App:
+
     ```sh
     az webapp list -o table
     ```
 
 1. The Web App created should be listed in the results like this:
+
     ![Azure Cloud Shell - Webapp list](screenshots/azure-cloud-shell-webapp-list.png)
 
 1. The app will be available at the URL:
+
     - https://udacity-cloud-devops-c02-final.azurewebsites.net
+
+1. Making a predict:
+
+    ```sh
+    ./make_predict_azure_app.sh
+    ```
+
+    The predict result should look like this:
+
+    ![Azure Cloud Shell - Make predict](screenshots/azure-cloud-shell-make-predict.png)
+
 
 ## GitHub Action Build
 1. The app build is setup on the GitHub Actions:
@@ -63,6 +79,15 @@ Flask ML Web App deployed on Azure with CI/CD
 
 1. The result of a successful build workflow should look like this:
     ![GitHub Actions - Build complete](screenshots/github-actions-build-complete.png)
+
+## Azure Pipelines
+1. The Azure Pipelines is configured for this project. As soon as new changes are pushed to the `main` branch, the build and deploy jobs will run and the updates will be deployed to the running app. The screenshot below show the pipelines configured:
+
+    ![Azure Pipelines - Build and deploy complete](screenshots/azure-pipelines-complete.png)
+
+1. The pipelines can be accessed at:
+
+    - https://dev.azure.com/douglascollioni/udacity-cloud-devops-c02-final/
 
 ## Enhancements
 - Write tests and run them using pytest
