@@ -10,9 +10,10 @@ Flask ML Web App deployed on Azure with CI/CD
 ## Azure Cloud Shell
 - ![GitHub project cloned on Azure Cloud Shell](screenshots/azure-cloud-shell-project-clone.png)
 
-## Instructions
-<TODO: Architectural Diagram (Shows how key parts of the system work)>
+## Architectural Diagram
+TODO
 
+## Instructions
 1. Create a Python virtual environment:
     ```sh
     make setup
@@ -72,6 +73,20 @@ Flask ML Web App deployed on Azure with CI/CD
 
     ![Azure Cloud Shell - Make predict](screenshots/azure-cloud-shell-make-predict.png)
 
+### Logs
+1. Inspect the logs from the running application:
+
+    https://udacity-cloud-devops-c02-final.scm.azurewebsites.net/api/logs/docker
+
+1. Alternatively, the logs can be streamed:
+    
+    ```sh
+    az webapp log tail
+    ```
+
+    The log tail should look like this:
+
+    ![Azure Cloud Shell - Log tail](screenshots/azure-cloud-shell-log-tail.png)
 
 ## GitHub Action Build
 1. The app build is setup on the GitHub Actions:
